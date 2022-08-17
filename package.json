@@ -14,16 +14,11 @@
     "@syncfusion/ej2-react-richtexteditor": "^19.4.50",
     "@syncfusion/ej2-react-schedule": "^19.4.50",
     "@types/ej.web.all": "^20.2.0",
-    "@types/jest": "^28.1.6",
-    "@types/node": "^18.7.4",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "5.0.0",
-    "typescript": "^4.7.4"
+    "react-scripts": "5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
