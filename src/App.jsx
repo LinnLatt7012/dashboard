@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
@@ -8,7 +8,9 @@ import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Ka
 
 import "./App.css"
 const App = () => {
-    const activeMenu = true;
+    // const activeMenu = true;
+    const [activeMenu, setActiveMenu] = useState(true)
+
     return (
         <div>
             <BrowserRouter>
@@ -17,6 +19,7 @@ const App = () => {
                         style={{ zIndex: '1000' }}>
                         <TooltipComponent content="Settings" position="Top" >
                             <button type='button'
+                                onClick={() => { setActiveMenu(!activeMenu) }}
                                 className='text-3xl p-3
                                 hover:drop-shadow-xl hover:bg-light-gray text-white' style={{
                                     background: 'blue',
@@ -28,7 +31,7 @@ const App = () => {
                     </div>
                     {activeMenu ? (
                         <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
-                            <Sidebar activeMenu={activeMenu} />
+                            <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} />
                         </div>
                     ) : (
                         <div className='w-0 dark:bg-secondary-dark-bg '>
