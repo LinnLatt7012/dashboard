@@ -32,6 +32,9 @@ module.exports = {
                 1200: '1200px',
                 1400: '1400px',
             },
+            screens: {
+                mdl: "940px",
+            },
             height: {
                 80: '80px',
             },

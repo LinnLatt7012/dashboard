@@ -18,8 +18,11 @@ export const ContextProvider = ({ children }) => {
     const handleClick = (clicked) => setIsClicked({ ...initialState, [clicked]: true });
 
     return (
-        // eslint-disable-next-line react/jsx-no-constructed-context-values
-        <StateContext.Provider value={{ activeMenu, screenSize, setScreenSize, handleClick, isClicked, initialState, setIsClicked, setActiveMenu }}>
+        <StateContext.Provider value={{
+            activeMenu, setActiveMenu,
+            screenSize, setScreenSize,
+            handleClick, isClicked, initialState, setIsClicked
+        }}>
             {children}
         </StateContext.Provider>
     );
